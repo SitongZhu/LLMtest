@@ -104,6 +104,8 @@ HF_MODEL_ROOT="${HF_MODEL_ROOT:-$MODEL_ROOT}"
 TASK3_DATA_DIR="${TASK3_DATA_DIR:-$LLAMA_FACTORY_DIR/../data/enitre_pipeline/task3}"
 DATASET_INFO_FILE="${DATASET_INFO_FILE:-$LLAMA_FACTORY_DIR/data/dataset_info.json}"
 SYNC_TASK3_SCRIPT="$LLAMA_FACTORY_DIR/run/test/sync_task3_datasets.py"
+# 缺基座时尝试 HF 下载（与 scripts/ensure_hf_sft_model.py 映射一致）；SKIP_MODEL_DOWNLOAD=1 关闭
+ENSURE_HF_SFT_SCRIPT="${ENSURE_HF_SFT_SCRIPT:-$LLAMA_FACTORY_DIR/../scripts/ensure_hf_sft_model.py}"
 
 # Dirs
 mkdir -p generate/task3 generate/task3_group
@@ -300,6 +302,8 @@ run_infer() {
 # - TEST_ONLY_SFT=1（默认）: 只跑现有 SFT 模型，不跑 zero-shot（本地/HF 模型未下载时用）。要跑 zero-shot 请设 TEST_ONLY_SFT=0
 # - TEST_SFT_MODELS="ModelA,ModelB": 只跑列表中的 SFT 模型。未设置时默认跑 DEFAULT_TEST_SFT_MODELS（见下方）
 # - DEFAULT_TEST_SFT_MODELS: 逗号分隔；未设置时内置为 Qwen GPTQ + Llama-3.1-8B + Mistral-7B
+# - SKIP_MODEL_DOWNLOAD=1: 不在 test 内尝试自动下载基座；缺权重则跳过该模型
+# - HF_TOKEN: gated 模型（如 Llama）下载需要
 raw_datasets="${TEST_DATASETS:-${DATASETS:-}}"
 if [[ -n "$raw_datasets" ]]; then
   read -r -a datasets <<<"$(parse_datasets "$raw_datasets")"
@@ -397,6 +401,26 @@ for dataset in "${datasets[@]}"; do
       fi
     fi
     model_path="${sft_models[$model_name]}"
+    if [[ ! -f "$model_path/config.json" ]]; then
+      if [[ "${SKIP_MODEL_DOWNLOAD:-0}" == "1" ]]; then
+        echo "Warning: 缺少基座 $model_path/config.json 且 SKIP_MODEL_DOWNLOAD=1，跳过 ${model_name}"
+        continue
+      fi
+      if [[ -f "$ENSURE_HF_SFT_SCRIPT" ]]; then
+        echo ">>> 基座不存在，尝试从 Hugging Face 下载: ${model_name} -> ${model_path}"
+        if ! python3 "$ENSURE_HF_SFT_SCRIPT" --model-key "$model_name" --model-root "$MODEL_ROOT"; then
+          echo "Warning: 下载失败或无可映射，跳过 ${model_name}"
+          continue
+        fi
+      else
+        echo "Warning: 未找到 $ENSURE_HF_SFT_SCRIPT ，无法自动下载，跳过 ${model_name}"
+        continue
+      fi
+    fi
+    if [[ ! -f "$model_path/config.json" ]]; then
+      echo "Warning: 基座仍不可用（$model_path），跳过 ${model_name}"
+      continue
+    fi
     template="$(get_template "$model_name")"
     model_tag="$(sanitize "$model_name")"
     adapter_dir=""
