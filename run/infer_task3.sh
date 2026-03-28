@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # LLMtest：自包含仓库；权重默认在 LLMTEST_ROOT/LLaMA-Factory/models，task3 数据在 LLMTEST_ROOT/data/...
+# 首次环境：conda activate 你的环境后执行
+#   bash LLMtest/scripts/setup_env.sh
+#   （可选 CUDA）export TORCH_INDEX_URL=https://download.pytorch.org/whl/cu126 && bash LLMtest/scripts/setup_env.sh
 # 用法（在 GPU 节点、已 conda activate 后）：
 #   export PATH="/path/to/env/bin:$PATH"
 #   bash /path/to/LLMtest/run/infer_task3.sh
