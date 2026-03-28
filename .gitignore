@@ -1,0 +1,30 @@
+# 本地数据（体积大；若需纳入仓库请删除本行或改用 Git LFS）
+/data/
+
+# 权重与缓存
+LLaMA-Factory/models/
+**/models/**/*.safetensors
+**/models/**/*.bin
+**/.cache/
+
+# 训练/推理产出（含符号链接 saves，勿提交）
+LLaMA-Factory/saves
+LLaMA-Factory/generate/
+LLaMA-Factory/log/
+
+# Python / 环境
+__pycache__/
+*.py[cod]
+.Python
+*.egg-info/
+.venv/
+venv/
+.env
+.env.*
+
+# 杂项
+*.log
+.DS_Store
+LLaMA-Factory/=*
+.idea/
+.vscode/

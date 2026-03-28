@@ -1,0 +1,221 @@
+{
+  "train_base": {
+    "file_name": "../../data/all.json"
+  },
+  "train_ase": {
+    "file_name": "../../data/enitre_pipeline/task4/ase/individual/ase_train.json"
+  },
+  "test_ase": {
+    "file_name": "../../data/enitre_pipeline/task4/ase/individual/ase_test.json"
+  },
+  "train_ase_group": {
+    "file_name": "../../data/enitre_pipeline/task4/ase/group/ase_train_group.json"
+  },
+  "test_ase_group": {
+    "file_name": "../../data/enitre_pipeline/task4/ase/group/ase_test_group.json"
+  },
+  "train_attitude": {
+    "file_name": "../data/enitre_pipeline/task3/train_wave10_gles.json"
+  },
+  "test_attitude": {
+    "file_name": "../data/enitre_pipeline/task3/test_wave11_gles.json"
+  },
+  "train_attitude_wave10": {
+    "file_name": "../data/enitre_pipeline/task3/train_wave10_gles.json"
+  },
+  "test_attitude_wave10": {
+    "file_name": "../data/enitre_pipeline/task3/test_wave10_gles.json"
+  },
+  "train_attitude_wave11": {
+    "file_name": "../data/enitre_pipeline/task3/train_wave11_gles.json"
+  },
+  "test_attitude_wave11": {
+    "file_name": "../data/enitre_pipeline/task3/test_wave11_gles.json"
+  },
+  "train_attitude_group": {
+    "file_name": "../data/enitre_pipeline/task3/group/train_attitude_group.json"
+  },
+  "test_attitude_group": {
+    "file_name": "../data/enitre_pipeline/task3/group/test_attitude_group.json"
+  },
+  "prompt_w22": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w22.json"
+  },
+  "prompt_w22_tanchored": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w22_tanchored.json"
+  },
+  "prompt_w25": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w25.json"
+  },
+  "prompt_w25_tanchored": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w25_tanchored.json"
+  },
+  "prompt_w25_trajectory": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w25_trajectory.json"
+  },
+  "prompt_w26": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w26.json"
+  },
+  "prompt_w26_tanchored": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w26_tanchored.json"
+  },
+  "prompt_w26_trajectory": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w26_trajectory.json"
+  },
+  "prompt_w28": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w28.json"
+  },
+  "prompt_w28_tanchored": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w28_tanchored.json"
+  },
+  "prompt_w28_trajectory": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w28_trajectory.json"
+  },
+  "train_dialogue": {
+    "file_name": "../../data/enitre_pipeline/task2/dialogue_train.json"
+  },
+  "test_dialogue": {
+    "file_name": "../../data/enitre_pipeline/task2/dialogue_test.json"
+  },
+  "train_性别": {
+    "file_name": "../../data/enitre_pipeline/task1/train_性别.json"
+  },
+  "test_性别": {
+    "file_name": "../../data/enitre_pipeline/task1/test_性别.json"
+  },
+  "train_年龄": {
+    "file_name": "../../data/enitre_pipeline/task1/train_年龄.json"
+  },
+  "test_年龄": {
+    "file_name": "../../data/enitre_pipeline/task1/test_年龄.json"
+  },
+  "train_户籍状态": {
+    "file_name": "../../data/enitre_pipeline/task1/train_户籍状态.json"
+  },
+  "test_户籍状态": {
+    "file_name": "../../data/enitre_pipeline/task1/test_户籍状态.json"
+  },
+  "train_职业类型": {
+    "file_name": "../../data/enitre_pipeline/task1/train_职业类型.json"
+  },
+  "test_职业类型": {
+    "file_name": "../../data/enitre_pipeline/task1/test_职业类型.json"
+  },
+  "train_最高教育程度": {
+    "file_name": "../../data/enitre_pipeline/task1/train_最高教育程度.json"
+  },
+  "test_最高教育程度": {
+    "file_name": "../../data/enitre_pipeline/task1/test_最高教育程度.json"
+  },
+  "train_家里人口数": {
+    "file_name": "../../data/enitre_pipeline/task1/train_家里人口数.json"
+  },
+  "test_家里人口数": {
+    "file_name": "../../data/enitre_pipeline/task1/test_家里人口数.json"
+  },
+  "train_家庭成员关系": {
+    "file_name": "../../data/enitre_pipeline/task1/train_家庭成员关系.json"
+  },
+  "test_家庭成员关系": {
+    "file_name": "../../data/enitre_pipeline/task1/test_家庭成员关系.json"
+  },
+  "train_有房": {
+    "file_name": "../../data/enitre_pipeline/task1/train_有房.json"
+  },
+  "test_有房": {
+    "file_name": "../../data/enitre_pipeline/task1/test_有房.json"
+  },
+  "train_有车": {
+    "file_name": "../../data/enitre_pipeline/task1/train_有车.json"
+  },
+  "test_有车": {
+    "file_name": "../../data/enitre_pipeline/task1/test_有车.json"
+  },
+  "train_家庭年收入": {
+    "file_name": "../../data/enitre_pipeline/task1/train_家庭年收入.json"
+  },
+  "test_家庭年收入": {
+    "file_name": "../../data/enitre_pipeline/task1/test_家庭年收入.json"
+  },
+  "train_家庭月消费主要支出项目": {
+    "file_name": "../../data/enitre_pipeline/task1/train_家庭月消费主要支出项目.json"
+  },
+  "test_家庭月消费主要支出项目": {
+    "file_name": "../../data/enitre_pipeline/task1/test_家庭月消费主要支出项目.json"
+  },
+  "train_生活压力程度": {
+    "file_name": "../../data/enitre_pipeline/task1/train_生活压力程度.json"
+  },
+  "test_生活压力程度": {
+    "file_name": "../../data/enitre_pipeline/task1/test_生活压力程度.json"
+  },
+  "wave11train_20260218_223831": {
+    "file_name": "../data/enitre_pipeline/task3/wave11train_20260218_223831.json"
+  },
+  "wave11test_20260218_223831": {
+    "file_name": "../data/enitre_pipeline/task3/wave11test_20260218_223831.json"
+  },
+  "wave10train_20260218_223831": {
+    "file_name": "../data/enitre_pipeline/task3/wave10train_20260218_223831.json"
+  },
+  "wave10test_20260218_223831": {
+    "file_name": "../data/enitre_pipeline/task3/wave10test_20260218_223831.json"
+  },
+  "prompt_w10": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w10.json"
+  },
+  "prompt_w10_baseline_notime": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w10_baseline_notime.json"
+  },
+  "prompt_w10_tanchored": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w10_tanchored.json"
+  },
+  "prompt_w14": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w14.json"
+  },
+  "prompt_w14_baseline_notime": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w14_baseline_notime.json"
+  },
+  "prompt_w14_tanchored": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w14_tanchored.json"
+  },
+  "prompt_w14_trajectory": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w14_trajectory.json"
+  },
+  "prompt_w15": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w15.json"
+  },
+  "prompt_w15_baseline_notime": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w15_baseline_notime.json"
+  },
+  "prompt_w15_tanchored": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w15_tanchored.json"
+  },
+  "prompt_w15_trajectory": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w15_trajectory.json"
+  },
+  "prompt_w22_baseline_notime": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w22_baseline_notime.json"
+  },
+  "prompt_w22_trajectory": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w22_trajectory.json"
+  },
+  "prompt_w23": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w23.json"
+  },
+  "prompt_w23_baseline_notime": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w23_baseline_notime.json"
+  },
+  "prompt_w23_tanchored": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w23_tanchored.json"
+  },
+  "prompt_w23_trajectory": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w23_trajectory.json"
+  },
+  "prompt_w25_baseline_notime": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w25_baseline_notime.json"
+  },
+  "prompt_w26_baseline_notime": {
+    "file_name": "../data/enitre_pipeline/task3/prompt_w26_baseline_notime.json"
+  }
+}
